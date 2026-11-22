@@ -1,0 +1,26 @@
+/* PowerShell commands data */
+C.push(
+['p','files','pwd','يعرض المسار الحالي الذي تعمل داخله.','pwd','pwd'],
+['p','files','ls','يعرض محتويات المجلد (اختصار Get-ChildItem).','ls [path] [-Force]','ls -Force'],
+['p','files','dir','مثل ls، ويعمل أيضًا في CMD.','dir [path]','dir'],
+['p','files','cd','ينتقل إلى مجلد آخر.','cd <path>','cd C:\\Projects\\my-app'],
+['p','files','mkdir','ينشئ مجلدًا جديدًا.','mkdir <name>','mkdir my-app'],
+['p','files','New-Item','ينشئ ملفًا أو مجلدًا.','New-Item <name> -ItemType File|Directory','New-Item index.html -ItemType File'],
+['p','files','Remove-Item','يحذف ملفًا أو مجلدًا نهائيًا دون سلة محذوفات.','Remove-Item <path> [-Recurse]','Remove-Item old.txt',2],
+['p','sys','systeminfo','يعرض معلومات النظام: الإصدار والذاكرة والمعالج.','systeminfo','systeminfo'],
+['p','sys','Get-ComputerInfo','يعرض تفاصيل موسّعة عن الجهاز والنظام.','Get-ComputerInfo [-Property <name>]','Get-ComputerInfo -Property OsName'],
+['p','sys','Get-Process','يعرض العمليات الجارية حاليًا.','Get-Process [name]','Get-Process node'],
+['p','sys','Get-Service','يعرض خدمات ويندوز وحالتها.','Get-Service [name]','Get-Service | Where-Object Status -eq Running'],
+['p','net','ipconfig','يعرض عنوان IP الأساسي لاتصالات الشبكة.','ipconfig','ipconfig'],
+['p','net','ipconfig /all','يعرض كل تفاصيل الشبكة: MAC وDNS وDHCP.','ipconfig /all','ipconfig /all'],
+['p','net','ping','يختبر الاتصال بموقع أو جهاز ويقيس زمن الاستجابة.','ping [-n count] <host>','ping -n 4 google.com'],
+['p','net','nslookup','يستعلم عن عنوان IP لاسم نطاق عبر DNS.','nslookup <domain>','nslookup github.com'],
+['p','net','tracert','يتتبع مسار الحزم إلى الوجهة عبر الشبكة.','tracert <host>','tracert github.com'],
+['p','dev','node -v','يعرض إصدار Node.js المثبّت.','node -v','node -v'],
+['p','dev','npm -v','يعرض إصدار npm المثبّت.','npm -v','npm -v'],
+['p','dev','git --version','يتأكد أن Git مثبّت ويعرض إصداره.','git --version','git --version'],
+['p','dev','code .','يفتح المجلد الحالي في VS Code.','code <path>','code .'],
+['p','dev','npm install','يثبّت اعتماديات المشروع من package.json.','npm install [package]','npm install'],
+['p','dev','npm run dev','يشغّل خادم التطوير حسب سكربت dev في المشروع.','npm run <script>','npm run dev'],
+['p','dev','npm run build','يبني المشروع للإنتاج حسب سكربت build.','npm run build','npm run build']
+);

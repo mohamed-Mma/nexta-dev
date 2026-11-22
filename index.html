@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nexta dev — أدوات المطور</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%9A%A1%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="nav"><div class="w">
+<a href="#home" class="logo-link" data-page="home" aria-label="Nexta dev"><span class="lg" role="img" aria-label="Nexta dev"></span></a>
+<nav id="nv">
+  <a href="#home" data-page="home">الرئيسية</a>
+  <a href="#tools" data-page="tools">Git Tools</a>
+  <a href="#commands" data-page="commands">الأوامر</a>
+  <a href="#gen" data-page="gen">Generator</a>
+  <a href="#favs" data-page="favs">المفضلة</a>
+  <a href="#about" data-page="about">عن الموقع</a>
+</nav>
+<div class="nav-actions">
+  <button class="ib theme-btn" id="th" aria-label="تبديل الوضع" title="Dark / Light">
+    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/></svg>
+  </button>
+  <button class="btn s" id="lg">EN</button>
+  <button class="ib menu" id="mn" aria-label="القائمة"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div>
+</div></header>
+
+<main>
+<!-- ========== PAGE: HOME ========== -->
+<section class="page on" id="page-home">
+<div class="w hero-inner">
+  <div class="fa">
+    <h1>أوامر المطور، أصبحت أسهل.</h1>
+    <p class="en">Your Workflow. Simplified.</p>
+    <p class="d">جهّز أوامرك، نظّم مشاريعك، وتعامل مع Git وGitHub بسهولة. اختر العملية، أدخل بياناتك، واحصل على أوامر جاهزة للتنفيذ.</p>
+
+    <div class="sr">
+      <input id="q" type="search" placeholder="ابحث في أوامر Git وPowerShell والأدوات…" autocomplete="off" aria-label="بحث">
+      <div id="rs" hidden></div>
+    </div>
+
+    <div class="quick">
+      <span class="ql">🚀 ابدأ سريعًا:</span>
+      <button class="chip qa" data-go="new">ارفع مشروع جديد</button>
+      <button class="chip qa" data-go="update">ارفع تحديثات</button>
+      <button class="chip qa" data-go="replace">استبدل نسخة كاملة</button>
+    </div>
+
+    <div class="home-cards">
+      <a href="#tools" data-page="tools" class="hcard">
+        <span class="hc-icon">⚡</span>
+        <b>Git Tools</b>
+        <p>رفع مشاريع وبناء أوامر Git جاهزة</p>
+      </a>
+      <a href="#commands" data-page="commands" class="hcard">
+        <span class="hc-icon">📚</span>
+        <b>مكتبة الأوامر</b>
+        <p>Git و PowerShell مع شرح وأمثلة</p>
+      </a>
+      <a href="#gen" data-page="gen" class="hcard">
+        <span class="hc-icon">🛠️</span>
+        <b>Command Generator</b>
+        <p>ولّد أوامر PowerShell و CMD</p>
+      </a>
+      <a href="#favs" data-page="favs" class="hcard">
+        <span class="hc-icon">⭐</span>
+        <b>المفضلة</b>
+        <p>أوامرك المحفوظة محليًا</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="term demo-wrap" dir="ltr">
+    <div class="th"><span class="dots"><b></b><b></b><b></b></span><span>PowerShell — my-project</span></div>
+    <div class="dm" id="demo" aria-label="عرض توضيحي لأوامر Git"></div>
+  </div>
+</div>
+</section>
+
+<!-- ========== PAGE: TOOLS ========== -->
+<section class="page" id="page-tools">
+<div class="w">
+  <div class="sec-head">
+    <h2>Git Tools</h2>
+    <p class="sub">أدخل بياناتك واحصل على أوامر جاهزة. الموقع يولّد الأوامر فقط ولا ينفذ شيئًا على جهازك.</p>
+  </div>
+
+  <div class="tabs" id="tt">
+    <button class="on" data-tab="qp">GitHub Quick Push</button>
+    <button data-tab="wb">Workflow Builder</button>
+  </div>
+
+  <div class="panel on" id="panel-qp">
+    <div class="tool">
+      <div class="card">
+        <div class="seg" id="qm">
+          <button data-m="new" class="on">رفع جديد</button>
+          <button data-m="update">تحديث موجود</button>
+          <button data-m="replace">استبدال كامل</button>
+        </div>
+        <div id="qf"></div>
+        <label class="sw"><input type="checkbox" id="qi" checked> Git Initialization (git init)</label>
+        <label class="sw"><input type="checkbox" id="qr" checked> Remote Setup (ربط origin)</label>
+        <label class="sw"><input type="checkbox" id="qfo"> Force Push (--force)</label>
+      </div>
+      <div>
+        <div class="warn" id="qw" hidden>⚠ Force Push قد يستبدل تاريخ الريبو وتغييرات موجودة عليه بشكل لا يمكن التراجع عنه. استخدمه فقط إذا كنت تفهم أثره.</div>
+        <div id="qo"></div>
+        <ol class="steps">
+          <li>أنشئ ريبو فارغًا على GitHub (للرفع الجديد).</li>
+          <li>افتح PowerShell داخل مجلد المشروع، أو أدخل مساره ليُضاف أمر cd.</li>
+          <li>الصق الأوامر بالترتيب، وسجّل دخولك إلى GitHub إذا طُلب منك.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" id="panel-wb">
+    <div class="tool">
+      <div class="card">
+        <label>ماذا تريد أن تفعل؟<select id="ws"></select></label>
+        <div id="wf"></div>
+      </div>
+      <div>
+        <div class="warn" id="ww" hidden></div>
+        <div id="wo"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ========== PAGE: COMMANDS ========== -->
+<section class="page" id="page-commands">
+<div class="w">
+  <div class="sec-head">
+    <h2>مكتبة الأوامر</h2>
+    <p class="sub">اضغط على أي أمر لعرض الشرح الكامل والمثال. استخدم الفلاتر للتصفية.</p>
+  </div>
+
+  <div class="lib-tabs" id="lt">
+    <button class="on" data-lib="g">Git</button>
+    <button data-lib="p">PowerShell</button>
+  </div>
+
+  <div class="chips" id="gc"></div>
+  <div class="g" id="gl"></div>
+
+  <div class="chips" id="pc" hidden></div>
+  <div class="g" id="pl" hidden></div>
+</div>
+</section>
+
+<!-- ========== PAGE: GENERATOR ========== -->
+<section class="page" id="page-gen">
+<div class="w">
+  <div class="sec-head">
+    <h2>Command Generator</h2>
+    <p class="sub">اختر الصدفة والمهمة وسيُنشأ الأمر الجاهز.</p>
+  </div>
+  <div class="tool">
+    <div class="card">
+      <label>الصدفة<select id="gs"><option value="ps">PowerShell</option><option value="cmd">CMD</option></select></label>
+      <label>المهمة<select id="gt"></select></label>
+      <div id="gf"></div>
+      <div class="btn-row">
+        <button class="btn" id="gx">Clear</button>
+        <button class="btn" id="gr">Reset</button>
+      </div>
+    </div>
+    <div>
+      <div class="warn" id="gw" hidden>⚠ أمر حساس: قد يحذف ملفات أو يوقف عمليات نهائيًا. راجع المسار والاسم جيدًا قبل التنفيذ.</div>
+      <div id="go"></div>
+      <div class="hist">
+        <div class="ch"><b>السجل (يُحفظ عند النسخ)</b><span class="sp"></span><button class="btn s" id="hc">مسح السجل</button></div>
+        <div id="gh"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ========== PAGE: FAVORITES ========== -->
+<section class="page" id="page-favs">
+<div class="w">
+  <div class="sec-head">
+    <h2>المفضلة</h2>
+    <p class="sub">الأوامر التي حفظتها بالنجمة. تُحفظ على متصفحك فقط، بدون حساب.</p>
+  </div>
+  <div class="g" id="fv"></div>
+</div>
+</section>
+
+<!-- ========== PAGE: ABOUT ========== -->
+<section class="page" id="page-about">
+<div class="w">
+  <div class="sec-head">
+    <h2>عن Nexta dev</h2>
+    <p class="sub">أدوات بسيطة للمطورين، خصوصًا المبتدئين.</p>
+  </div>
+  <div class="g about-g">
+    <div class="card"><b>يولّد ولا ينفذ</b><p>كل ما يظهر هنا نص جاهز للنسخ. أنت من يشغّله في جهازك.</p></div>
+    <div class="card"><b>بدون حساب</b><p>المفضلة والسجل تُحفظ في متصفحك عبر LocalStorage.</p></div>
+    <div class="card"><b>شرح لكل أمر</b><p>كل سطر مع توضيح وظيفته وتحذير عند الأوامر الخطرة.</p></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="ft"><div class="w">
+  <div><span class="lg" role="img" aria-label="Nexta dev"></span><div>Developer tools made simple.</div></div>
+  <div class="ft-links">
+    <a href="#tools" data-page="tools">Git Tools</a>
+    <a href="#commands" data-page="commands">الأوامر</a>
+    <a href="#gen" data-page="gen">Generator</a>
+    <a href="#about" data-page="about">About</a>
+  </div>
+  <div>© 2026 Nexta dev</div>
+</div></footer>
+
+<dialog id="md"><div class="mb" id="mb"></div></dialog>
+<div id="ts" role="status"></div>
+
+<script src="js/app.js"></script>
+<script src="js/git.js"></script>
+<script src="js/powershell.js"></script>
+<script src="js/generator.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
